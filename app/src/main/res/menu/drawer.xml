@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_attachment"
+            android:checked="true"
+            android:icon="@drawable/common_full_open_on_phone"
+            android:title="kldhg" />
+        <item
+            android:id="@+id/navigation_item_images"
+            android:icon="@drawable/common_google_signin_btn_text_light_focused"
+            android:title="sa nHtdgh dfh" />
+
+    </group>
+
+    <item android:title="dtnfd">
+        <menu>
+            <item
+                android:icon="@drawable/common_google_signin_btn_text_light_focused"
+                android:title="gsdf" />
+            <item
+                android:icon="@drawable/common_full_open_on_phone"
+                android:title="fdhfhf" />
+        </menu>
+    </item>
+
+</menu>

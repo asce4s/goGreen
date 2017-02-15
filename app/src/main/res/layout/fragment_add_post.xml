@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fr_add_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.asce4s.gogreen.fragments.AddPost">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="32sp">
+
+                <ImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    app:srcCompat="@drawable/placeholder"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="10dp"/>
+
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:padding="0dp"
+                    card_view:cardElevation="2sp"
+                    card_view:cardUseCompatPadding="false">
+
+
+                    <fragment
+
+                        android:id="@+id/place_autocomplete_fragment"
+                        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:ems="10"
+                    android:hint="Title"
+                    android:inputType="textPersonName" />
+
+
+                <EditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:inputType="textMultiLine" />
+
+
+
+
+
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:text="Add post"
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

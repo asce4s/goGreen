@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.asce4s.gogreen">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcherx"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!--
+            <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAz-Jzc5htQUNfKz1pswXqZbLNJeG4WXm4"/>
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBo48-Ha67EPSGRFiu3BbJ1Ikxj6CP23A0" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".userActivity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW"
+                    android:configChanges="orientation|keyboardHidden|screenSize" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="gogreen.asce4s.com"
+                    android:pathPrefix="/login"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".userActivity.RegisterActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Test"
+            android:label="@string/title_activity_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".userActivity.ResetPWd"
+            android:label="@string/title_activity_reset_pwd"></activity>
+    </application>
+
+</manifest>

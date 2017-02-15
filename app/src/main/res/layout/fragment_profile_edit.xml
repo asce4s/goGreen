@@ -1,0 +1,220 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.asce4s.gogreen.fragments.ProfileEdit"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ccc">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bg"
+                android:elevation="4dp"
+                android:paddingBottom="24dp"
+                android:layout_below="@+id/header_cover_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="95dp"
+                    android:text="name"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Starter"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/default_male"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="4dp"
+                app:civ_shadow="true"
+                app:civ_shadow_radius="10"
+                app:civ_shadow_color="#8BC34A"
+                android:gravity="center_vertical|center|center_horizontal"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_below="@+id/header_cover_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-60dp"
+                android:elevation="10dp"
+                android:id="@+id/iv_profile" />
+
+
+            <LinearLayout
+                android:id="@+id/prof_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_layout"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:background="#fff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="32sp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+
+                        android:id="@+id/et_name"
+                        android:hint="Name"
+                        android:ems="10"
+                        android:layout_marginBottom="10sp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/et_email"
+                        android:hint="Email"
+
+                        android:layout_marginBottom="10sp"/>
+
+                    <TextView
+                        android:text="Link with"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5"
+
+                        android:layout_marginLeft="3sp"
+                        android:textColor="#B0B0B0"
+                        android:layout_weight="0.5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:gravity="center_vertical|center|center_horizontal"
+                        android:orientation="horizontal"
+                        android:textAlignment="center"
+                        android:transitionGroup="false">
+
+                        <in.championswimmer.libsocialbuttons.buttons.BtnFacebook
+                            android:id="@+id/btn_fb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Facebook"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:padding="12sp"
+                            android:elevation="0dp" />
+
+                        <in.championswimmer.libsocialbuttons.buttons.BtnGoogleplus
+                            android:id="@+id/btn_google"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Google"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:padding="12sp"/>
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:id="@+id/btn_save"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginBottom="15sp"
+                        android:textColor="#fff" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@+id/prof_info"
+    android:background="#fff"
+    android:layout_marginTop="5dp"
+    android:padding="32sp">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/et_pw"
+        android:layout_weight="1"
+        android:hint="New Password"
+        android:layout_marginBottom="10sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/et_cpw"
+        android:layout_weight="1"
+        android:hint="Confirm Password"
+        android:layout_marginBottom="10sp"/>
+
+    <Button
+        android:text="Change Password "
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_changepw"
+        android:background="@color/accent"
+        android:textColor="#fff" />
+
+</LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>
